@@ -50,3 +50,10 @@
     return false;
   });
 })(jQuery);
+function playVideo() {
+  var video = document.querySelector('.video-container video');
+  var playButton = document.querySelector('.video-container .play-button');
+  video.style.display = 'block';
+  video.play();
+  playButton.style.display = 'none';
+}
