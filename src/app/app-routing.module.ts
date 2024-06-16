@@ -7,6 +7,8 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { CongoListComponent } from './species-list/congo-list/congo-list.component';
 import { LagosListComponent } from './species-list/lagos-list/lagos-list.component';
+import { QuoteComponent } from './quote/quote.component';
+import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
   {path: 'Blog', component: BlogComponent},
   {path: 'Contact', component: ContactComponent},
   {path: 'Congo', component: CongoListComponent},
-  {path: 'Lagos', component: LagosListComponent}
+  {path: 'Lagos', component: LagosListComponent},
+  {path: 'Quote', component: QuoteComponent},
+  {path: 'Terms', component: TermsComponent}
 ];
 
 @NgModule({

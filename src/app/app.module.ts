@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { SpeciesListComponent } from './species-list/species-list.component';
 import { CongoListComponent } from './species-list/congo-list/congo-list.component';
 import { LagosListComponent } from './species-list/lagos-list/lagos-list.component';
+import { QuoteComponent } from './quote/quote.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,15 @@ import { LagosListComponent } from './species-list/lagos-list/lagos-list.compone
     ContactComponent,
     SpeciesListComponent,
     CongoListComponent,
-    LagosListComponent
+    LagosListComponent,
+    QuoteComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
