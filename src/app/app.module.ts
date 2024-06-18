@@ -16,6 +16,9 @@ import { CongoListComponent } from './species-list/congo-list/congo-list.compone
 import { LagosListComponent } from './species-list/lagos-list/lagos-list.component';
 import { QuoteComponent } from './quote/quote.component';
 import { TermsComponent } from './terms/terms.component';
+import { HappyClientComponent } from './happy-client/happy-client.component';
+import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -31,13 +34,16 @@ import { TermsComponent } from './terms/terms.component';
     CongoListComponent,
     LagosListComponent,
     QuoteComponent,
-    TermsComponent
+    TermsComponent,
+    HappyClientComponent,
+    PopupDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialog
   ],
   providers: [],
   bootstrap: [AppComponent]

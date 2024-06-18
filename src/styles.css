@@ -48,3 +48,5 @@ color: #0077be !important;
 .service-btn .fa-project-diagram{
     color: #fff !important;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
