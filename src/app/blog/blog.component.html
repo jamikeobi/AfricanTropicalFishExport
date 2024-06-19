@@ -68,8 +68,21 @@
     >
       <h4 class="text-uppercase text-primary">Our Species List</h4>
       <h1 class="display-3 text-capitalize mb-3">
-        FRESH WATER FISH PRICE LIST
+        FRESH WATER FISH LIST
       </h1>
+    </div>
+
+    <!-- Write-up Section starts -->
+    <div *ngIf="showWriteUp" class="write-up">
+      <p>Welcome to the Fish List Page! Here you'll find a variety of fish species.
+        Please note that the following fish are categorized as small fishes with a quantity of 100 per box or more.
+      </p>
+      <button (click)="closeWriteUp()">OK</button>
+    </div>
+    <!-- Write-up Section Ends -->
+    
+    <div class="additional-message">
+      <p>If you would like to order a fish that is not listed, please inform us when you fill out the <a href="/Contact">Contact Form</a></p>
     </div>
 
     <div>

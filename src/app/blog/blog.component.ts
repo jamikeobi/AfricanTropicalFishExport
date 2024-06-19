@@ -10,10 +10,15 @@ import { PopupServiceService } from '../popup-dialog/popup-service.service';
 })
 export class BlogComponent{
   fishList$!: Observable<any[]>;
+  showWriteUp: boolean = true;
 
-  constructor(private blogService: BlogServiceService, private popupService: PopupServiceService){}
+  constructor(private blogService: BlogServiceService){}
   ngOnInit(): void {
     this.fishList$ = this.blogService.getFishData();
-    this.popupService.openPopUpMessage();
   }  
+
+
+  closeWriteUp(): void {
+    this.showWriteUp = false;
+  }
 }

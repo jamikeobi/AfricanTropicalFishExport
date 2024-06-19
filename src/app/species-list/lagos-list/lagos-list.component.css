@@ -1,0 +1,9 @@
+/*Looped Video Styling */
+/* Set a fixed height and maintain aspect ratio for the video tags */
+.blog-item video {
+    width: 100%; /* Ensure video fills its container horizontally */
+    height: 300px; /* Fixed height for the video */
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    display: block; /* Prevent any default inline behaviors */
+  }
+  

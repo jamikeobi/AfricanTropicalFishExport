@@ -96,7 +96,7 @@ export class BlogServiceService {
     { sn: 87, nameEnglish: "Zebra Danio", nameScientific: "Danio Rerio", qtyPerBox: 300 }
   ];
 
-  private searchSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  // private searchSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
   constructor() { }
 

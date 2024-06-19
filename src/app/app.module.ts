@@ -18,8 +18,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { TermsComponent } from './terms/terms.component';
 import { HappyClientComponent } from './happy-client/happy-client.component';
 import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
-
+import { SearchComponent } from './species-list/search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,14 +35,14 @@ import { MatDialog } from '@angular/material/dialog';
     QuoteComponent,
     TermsComponent,
     HappyClientComponent,
-    PopupDialogComponent
+    PopupDialogComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
     BrowserAnimationsModule,
-    MatDialog
   ],
   providers: [],
   bootstrap: [AppComponent]
