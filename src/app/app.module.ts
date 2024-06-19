@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,6 +20,7 @@ import { TermsComponent } from './terms/terms.component';
 import { HappyClientComponent } from './happy-client/happy-client.component';
 import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
 import { SearchComponent } from './species-list/search/search.component';
+import { TestimonialsComponent } from './service/testimonials/testimonials.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,13 +38,15 @@ import { SearchComponent } from './species-list/search/search.component';
     TermsComponent,
     HappyClientComponent,
     PopupDialogComponent,
-    SearchComponent
+    SearchComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
     BrowserAnimationsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

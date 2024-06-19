@@ -71,12 +71,16 @@
         FRESH WATER FISH LIST
       </h1>
     </div>
+    
 
     <!-- Write-up Section starts -->
     <div *ngIf="showWriteUp" class="write-up">
-      <p>Welcome to the Fish List Page! Here you'll find a variety of fish species.
-        Please note that the following fish are categorized as small fishes with a quantity of 100 per box or more.
+      <p class="lead">
+        At our fish exportation hub, we offer a wide range of tropical fish species sourced from Africa. Each species is carefully categorized based on size, ensuring you receive the best quality and quantity per box.
       </p>
+      <!-- <p>
+        Please note that the following fish are categorized as small fishes with a quantity of 100 or more per box:
+      </p> -->
       <button (click)="closeWriteUp()">OK</button>
     </div>
     <!-- Write-up Section Ends -->
@@ -85,24 +89,32 @@
       <p>If you would like to order a fish that is not listed, please inform us when you fill out the <a href="/Contact">Contact Form</a></p>
     </div>
 
+    
+    <!-- Search Component Called -->
+    <app-search></app-search>
+    <!-- Search Component Called -->
+
     <div>
       <table>
         <tr>
           <th>S/N</th>
           <th>NAME (ENGLISH)</th>
           <th>NAMES (SCIENTIFIC)</th>
-          <th>QTY PER BOX</th>
+          <!-- <th>QTY PER BOX</th> -->
         </tr>
         <ng-container *ngIf="fishList$ | async as fishList">
-          <tr *ngFor="let fish of fishList">
+          <tr *ngFor="let fish of fishList | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
             <td>{{ fish.sn }}</td>
             <td>{{ fish.nameEnglish }}</td>
             <td>{{ fish.nameScientific }}</td>
-            <td>{{ fish.qtyPerBox }}</td>
+            <!-- <td>{{ fish.qtyPerBox }}</td> -->
           </tr>
         </ng-container>
         
       </table>
     </div>
+
+    <pagination-controls (pageChange)="p = $event"   class="pagination-controls"></pagination-controls>
+
   </div>
 </div>

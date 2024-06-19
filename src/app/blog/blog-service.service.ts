@@ -96,11 +96,28 @@ export class BlogServiceService {
     { sn: 87, nameEnglish: "Zebra Danio", nameScientific: "Danio Rerio", qtyPerBox: 300 }
   ];
 
-  // private searchSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private searchSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
   constructor() { }
 
   getFishData(): Observable<any[]> {
     return of(this.fishList)
   }
+
+  GetFishList(): Observable<any[]>{
+    return this.searchSubject.pipe(
+      map((searchTerm: string) =>{
+        if(!searchTerm){
+          return this.fishList;
+        }
+        searchTerm = searchTerm.toLowerCase();
+        return this.fishList.filter(fish => fish.nameEnglish.toLowerCase().includes(searchTerm));
+      })
+    );
+  }
+
+  setSearchTerm(term: string){
+    this.searchSubject.next(term);
+  }
+
 }

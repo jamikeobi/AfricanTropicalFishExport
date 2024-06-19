@@ -11,10 +11,14 @@ import { PopupServiceService } from '../popup-dialog/popup-service.service';
 export class BlogComponent{
   fishList$!: Observable<any[]>;
   showWriteUp: boolean = true;
+  items: any[] = []; // Array to hold items for pagination
+  // collection: any[];
+  itemsPerPage: number = 20;
+  p: number = 1;
 
   constructor(private blogService: BlogServiceService){}
   ngOnInit(): void {
-    this.fishList$ = this.blogService.getFishData();
+    this.fishList$ = this.blogService.GetFishList();
   }  
 
 
