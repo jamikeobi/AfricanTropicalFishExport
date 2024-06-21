@@ -1,4 +1,4 @@
-import { Component , OnInit} from '@angular/core';
+import { Component , OnInit, ViewChild , ElementRef} from '@angular/core';
 import { Observable } from 'rxjs';
 import { SpeciesListServicesService } from '../species-list-services.service';
 
@@ -14,5 +14,12 @@ export class CongoListComponent implements OnInit{
 
   ngOnInit(){
     this.CongoFishList$ = this.speciesList.getCongoFishList();
+  }
+  @ViewChild('videoElement') videoElement!: ElementRef;
+
+  ngAfterViewInit() {
+    this.videoElement.nativeElement.addEventListener('contextmenu', (event: MouseEvent) => {
+      event.preventDefault();
+    });
   }
 }

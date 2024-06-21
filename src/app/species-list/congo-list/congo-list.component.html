@@ -62,21 +62,24 @@
             data-wow-delay="0.2s"
             style="max-width: 800px"
           >
-            <h4 class="text-uppercase text-primary">Congo Fishes Video Gallery</h4>
-            <!-- <h1 class="display-3 text-capitalize mb-3">FRESH WATER FISH PRICE LIST</h1> -->
+            <h1 class="display-3 text-capitalize mb-3">FRESH WATER FISH PRICE LIST</h1>
+            <h4 class="text-uppercase text-primary">Explore Our Congo Fish Gallery</h4>
+            <div class="additional-message">
+              <p>If you would like to order a fish that is not in this gallery, please inform us when you fill out the <a href="/Contact">Contact Form</a></p>
+            </div>
           </div>
           <div class="row g-4 justify-content-center">
             <div class="row">
               <ng-container *ngIf="CongoFishList$ | async as CongoFishList">
                 <div *ngFor="let CongoFish of CongoFishList; let i = index" class="col-lg-6 col-xl-4 wow fadeInUp" [attr.data-wow-delay]="i * 0.2 + 's'">
                   <div class="blog-item">
-                    <div class="blog-img">
-                      <video class="img-fluid rounded-top w-100" controls>
+                    <div>
+                      <video class="img-fluid rounded-top w-100" controls id="myVideo" #videoElement>
                         <source [src]="CongoFish.source" type="video/mp4" />
                       </video>
-                      <div class="blog-date px-4 py-2">
-                        <i class="fa fa-calendar-alt me-1"></i> Jan 12 2025 <!-- Adjust date as per your requirement -->
-                      </div>
+                      <!-- <div class="blog-date px-4 py-2">
+                        <i class="fa fa-calendar-alt me-1"></i> Jan 12 2025 
+                      </div> -->
                     </div>
                     <div class="blog-content rounded-bottom p-4" style="margin-bottom: 20px;">
                       <a href="#" class="h4 d-inline-block mb-3">{{ CongoFish.Fishname }}</a>

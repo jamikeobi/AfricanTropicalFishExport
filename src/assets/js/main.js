@@ -57,3 +57,16 @@ function playVideo() {
   video.play();
   playButton.style.display = 'none';
 }
+document.addEventListener('DOMContentLoaded', (event) => {
+  const video = document.getElementById('myVideo');
+
+  // Disable right-click context menu
+  video.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+  });
+
+  // Add custom controls if needed
+  video.addEventListener('click', (e) => {
+      // Your custom control logic here
+  });
+});

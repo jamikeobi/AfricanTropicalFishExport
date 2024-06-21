@@ -395,7 +395,7 @@
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)), url(../../assets/img/fishBackground.jpg);
+    background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)), url(../../assets/img/NewFishes/Atya_gabonensis.JPG );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -604,9 +604,6 @@
     transition: .5s
 }
 
-.blog .blog-item:hover {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .2)
-}
 
 .blog .blog-item .blog-img {
     position: relative;
@@ -636,9 +633,6 @@
     transform: scale(1.2)
 }
 
-.blog .blog-item:hover .blog-img::after {
-    background: rgba(0, 209, 249, .2)
-}
 
 .blog .blog-item .blog-date {
     position: absolute;
