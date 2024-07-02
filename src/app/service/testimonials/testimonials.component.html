@@ -1,0 +1,16 @@
+<!-- src/app/testimonials/testimonials.component.html -->
+
+<div class="testimonial-container">
+    <div *ngFor="let testimonial of testimonials" class="testimonial">
+      <!-- <img [src]="testimonial.clientImage" alt="{{ testimonial.clientName }}" class="client-image"> -->
+      <h3>{{ testimonial.clientName }}</h3>
+      <h4>{{ testimonial.clientProfession }}</h4>
+      <div class="stars">
+        <span class="star" *ngFor="let star of [1, 2, 3, 4, 5]">
+          <i class="fa fa-star" [ngClass]="{'filled': star <= testimonial.stars}"></i>
+        </span>
+      </div>
+      <p>{{ testimonial.testimonialText }}</p>
+    </div>
+  </div>
+  

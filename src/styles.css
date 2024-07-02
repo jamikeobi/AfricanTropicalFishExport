@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+.fa-hand-holding-water:hover{
+    color:  #0077be !important;
+}
+.fa-filter:hover{
+color: #0077be !important;
+}
+.fa-recycle:hover{
+    color: #0077be !important;
+}
+.fa-microscope:hover{
+    color: #0077be !important;
+}
+
+.rounded-circle{
+    background: #0077be !important;
+}
+
+.counter-item-icon{
+    background-color: #0077be !important;
+}
+
+.h4 a{
+    color: #C2B280 !important;
+}
+.h4 a:hover{
+    color: #0077be !important;
+}
+
+.service-btn{
+    background: #C2B280 !important;
+}
+.service-btn .fa-hand-holding-water{
+    color: #fff !important;
+}
+.service-btn .fa-dumpster-fire{
+    color: #fff !important;
+}
+.service-btn .fa-filter {
+    color: #fff !important;
+}
+.service-btn .fa-assistive-listening-systems{
+    color: #fff !important;
+}
+.service-btn .fa-recycle{
+    color: #fff !important;
+}
+.service-btn .fa-project-diagram{
+    color: #fff !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

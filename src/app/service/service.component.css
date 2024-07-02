@@ -1,0 +1,54 @@
+.fa-fish:hover{
+    color:  #0077be !important;
+}
+.fa-globe:hover{
+color: #0077be !important;
+}
+.fa-seedling:hover{
+    color: #0077be !important;
+}
+.fa-clipboard-check:hover{
+    color: #0077be !important;
+}
+
+.fa-smile:hover{
+    color: #0077be !important;
+}
+
+.rounded-circle{
+    background: #0077be !important;
+}
+
+.counter-item-icon{
+    background-color: #0077be !important;
+}
+
+.h4 a{
+    color: #C2B280 !important;
+}
+.h4 a:hover{
+    color: #0077be !important;
+}
+
+/* Our Services Styling */
+.service-btn{
+    background: #C2B280 !important;
+}
+.service-btn .fa-home{
+    color: #fff !important;
+}
+.service-btn .fa-fish{
+    color: #fff !important;
+}
+.service-btn .fa-search {
+    color: #fff !important;
+}
+.service-btn .fa-building{
+    color: #fff !important;
+}
+.service-btn .fa-water{
+    color: #fff !important;
+}
+.service-btn .fa-project-diagram{
+    color: #fff !important;
+}

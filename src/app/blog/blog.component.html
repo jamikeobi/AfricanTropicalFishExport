@@ -1,0 +1,121 @@
+<!-- First Section Starts -->
+<div class="container-fluid bg-breadcrumb" style="height: 400px">
+  <div
+    class="container text-center d-flex flex-column justify-content-center"
+    style="max-width: 900px; height: 100%"
+  >
+    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
+      Species
+    </h4>
+    <ol
+      class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown"
+      data-wow-delay="0.3s"
+    >
+      <li class="breadcrumb-item"><a href="/Home">Home </a></li>
+      <span> / </span>
+      <li class="breadcrumb-item active text-primary">Species</li>
+    </ol>
+  </div>
+</div>
+
+<!-- First Section Ends -->
+
+<!-- SearchBar Popup Starts -->
+<div
+  class="modal fade"
+  id="searchModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content rounded-0">
+      <div class="modal-header">
+        <h4 class="modal-title mb-0" id="exampleModalLabel">
+          Search by keyword
+        </h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body d-flex align-items-center">
+        <div class="input-group w-75 mx-auto d-flex">
+          <input
+            type="search"
+            class="form-control p-3"
+            placeholder="keywords"
+            aria-describedby="search-icon-1"
+          />
+          <span id="search-icon-1" class="input-group-text btn border p-3"
+            ><i class="fa fa-search text-white"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Search Bar Popup Ends -->
+
+<div class="container-fluid blog py-5 bg-light">
+  <div class="container py-5">
+    <div
+      class="text-center mx-auto pb-5 wow fadeInUp"
+      data-wow-delay="0.2s"
+      style="max-width: 800px"
+    >
+      <h1 class="display-3 text-capitalize mb-3">
+        FRESH WATER FISH LIST
+      </h1>
+      <h4 class="text-uppercase text-primary">Our Species List</h4>
+
+    </div>
+    
+
+    <!-- Write-up Section starts -->
+    <div *ngIf="showWriteUp" class="write-up">
+      <p class="lead">
+        At our fish exportation hub, we offer a wide range of tropical fish species sourced from Africa. Each species is carefully categorized based on size, ensuring you receive the best quality and quantity per box.
+      </p>
+      <!-- <p>
+        Please note that the following fish are categorized as small fishes with a quantity of 100 or more per box:
+      </p> -->
+      <button (click)="closeWriteUp()">OK</button>
+    </div>
+    <!-- Write-up Section Ends -->
+    
+    <div class="additional-message">
+      <p>If you would like to order a specie that does not appear in this gallery, please inform us when you fill out the <a href="/Contact">Contact Form</a></p>
+    </div>
+
+    
+    <!-- Search Component Called -->
+    <app-search></app-search>
+    <!-- Search Component Called -->
+
+    <div>
+      <table>
+        <tr>
+          <th>S/N</th>
+          <th>NAME (ENGLISH)</th>
+          <th>NAMES (SCIENTIFIC)</th>
+          <!-- <th>QTY PER BOX</th> -->
+        </tr>
+        <ng-container *ngIf="fishList$ | async as fishList">
+          <tr *ngFor="let fish of fishList | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+            <td>{{ fish.sn }}</td>
+            <td>{{ fish.nameEnglish }}</td>
+            <td>{{ fish.nameScientific }}</td>
+            <!-- <td>{{ fish.qtyPerBox }}</td> -->
+          </tr>
+        </ng-container>
+        
+      </table>
+    </div>
+
+    <pagination-controls (pageChange)="p = $event"   class="pagination-controls"></pagination-controls>
+
+  </div>
+</div>

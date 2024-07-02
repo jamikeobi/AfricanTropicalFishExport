@@ -1,0 +1,126 @@
+.fa-fish:hover{
+    color:  #0077be !important;
+}
+.fa-globe:hover{
+color: #0077be !important;
+}
+.fa-seedling:hover{
+    color: #0077be !important;
+}
+.fa-clipboard-check:hover{
+    color: #0077be !important;
+}
+
+.fa-smile:hover{
+    color: #0077be !important;
+}
+
+.rounded-circle{
+    background: #0077be !important;
+}
+
+.counter-item-icon{
+    background-color: #0077be !important;
+}
+
+.h4 a{
+    color: #C2B280 !important;
+}
+.h4 a:hover{
+    color: #0077be !important;
+}
+
+/* Our Services Styling */
+.service-btn{
+    background: #C2B280 !important;
+}
+.service-btn .fa-home{
+    color: #fff !important;
+}
+.service-btn .fa-fish{
+    color: #fff !important;
+}
+.service-btn .fa-search {
+    color: #fff !important;
+}
+.service-btn .fa-building{
+    color: #fff !important;
+}
+.service-btn .fa-water{
+    color: #fff !important;
+}
+.service-btn .fa-project-diagram{
+    color: #fff !important;
+}
+
+.h4 a{
+    color: #C2B280 !important;
+}
+.h4 a:hover{
+    color: #0077be !important;
+}
+
+i{
+    color: #0077be !important;
+}
+
+/* Contact Form Styling */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: .5s all ease-in-out;
+  }
+
+  .form-container:hover{
+    transform: scale(1.05);
+  }
+  
+  .form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .text-danger {
+    color: red;
+    font-size: 14px;
+  }
+  

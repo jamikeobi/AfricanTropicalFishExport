@@ -1,0 +1,84 @@
+.rounded-circle .bg-primary{
+    background-color: #C2B280 !important;
+}
+.fa-fish:hover{
+    color:  #0077be !important;
+}
+.fa-globe:hover{
+color: #0077be !important;
+}
+.fa-seedling:hover{
+    color: #0077be !important;
+}
+.fa-clipboard-check:hover{
+    color: #0077be !important;
+}
+
+.fa-smile:hover{
+    color: #0077be !important;
+}
+
+.rounded-circle{
+    background: #0077be !important;
+}
+
+.counter-item-icon{
+    background-color: #0077be !important;
+}
+
+.h4 a{
+    color: #C2B280 !important;
+}
+.h4 a:hover{
+    color: #0077be !important;
+}
+
+/* Our Services Styling */
+.service-btn{
+    background: #C2B280 !important;
+}
+.service-btn .fa-home{
+    color: #fff !important;
+}
+.service-btn .fa-fish{
+    color: #fff !important;
+}
+.service-btn .fa-search {
+    color: #fff !important;
+}
+.service-btn .fa-building{
+    color: #fff !important;
+}
+.service-btn .fa-water{
+    color: #fff !important;
+}
+.service-btn .fa-project-diagram{
+    color: #fff !important;
+}
+
+/* Feature Section Styling */
+.feature-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #007bff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+  .feature-icon i {
+    color: #fff;
+  }
+
+  i:hover{
+color: #007bff !important;
+  }

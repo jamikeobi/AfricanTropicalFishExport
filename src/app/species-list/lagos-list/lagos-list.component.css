@@ -1,0 +1,35 @@
+/*Looped Video Styling */
+/* Set a fixed height and maintain aspect ratio for the video tags */
+.blog-item video {
+    width: 100%; /* Ensure video fills its container horizontally */
+    height: 300px; /* Fixed height for the video */
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    display: block; /* Prevent any default inline behaviors */
+  }
+  .additional-message {
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+  }
+  
+  .additional-message p {
+    margin: 0;
+  }
+  
+  /* Context Menu Styling */
+  .video-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+  }
+  
