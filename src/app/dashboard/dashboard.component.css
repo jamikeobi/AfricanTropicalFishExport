@@ -22,8 +22,13 @@
   }
   
   .content {
+    display: flex;
     flex: 1; /* Take remaining vertical space */
     overflow-y: auto; /* Enable vertical scrolling */
     padding: 20px; /* Optional padding for content */
+    margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      flex: 1;
   }
   

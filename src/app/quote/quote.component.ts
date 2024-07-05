@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, ViewChild, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { QuoteFormData } from '../Model/quote';
+import { FormServiceService } from '../dashboard/form-service.service';
 
 @Component({
   selector: 'app-quote',
@@ -40,11 +42,13 @@ export class QuoteComponent {
 
   http: HttpClient = inject(HttpClient);
 
+
   onSubmit(form: any) {
     this.submitted = false;
     if (form.valid) {
       // console.log('Form Submitted!', form.value);
       const header = new HttpHeaders({'myHeader' : 'QouteForm'});
+      const currentDate = new Date().toISOString()
       const qouteData = {
         fname: this.contactForm.value.fname,
         lname: this.contactForm.value.lname,
@@ -53,7 +57,8 @@ export class QuoteComponent {
         fishType: this.contactForm.value.fishType,
         quantity: this.contactForm.value.quantity,
         optionalFishType: this.contactForm.value.optionalFishType,
-        message: this.contactForm.value.message
+        message: this.contactForm.value.message,
+        date: currentDate
       };
       this.http.post<{name : string}>('https://africantropicalfish-default-rtdb.firebaseio.com/qouteForm.json', qouteData, {headers : header}).subscribe((response)=> {
         console.log('Form submission response:',response);

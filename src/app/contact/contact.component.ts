@@ -29,6 +29,7 @@ export class ContactComponent implements OnInit{
 
   onSubmit() {
     const header = new HttpHeaders({'header':'Contact Form'});
+    const currentDate = new Date().toISOString();
     if (this.orderForm.valid) {
       const formData = {
         fullName: this.orderForm.get('fullName')?.value,
@@ -39,7 +40,8 @@ export class ContactComponent implements OnInit{
         country: this.orderForm.get('country')?.value,
         fishName: this.orderForm.get('fishName')?.value,
         quantity: this.orderForm.get('quantity')?.value,
-        message: this.orderForm.get('message')?.value
+        message: this.orderForm.get('message')?.value,
+        date: currentDate
       };
       this.http.post<{name: string}>('https://africantropicalfish-default-rtdb.firebaseio.com/contactForm.json', formData,{headers: header}).subscribe((response) => {
         console.log('Form has been submitted:', response);

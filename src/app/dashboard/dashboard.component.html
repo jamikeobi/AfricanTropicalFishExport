@@ -1,4 +1,6 @@
 <div class="container">
+
+  <h2>DashBoard</h2>
   
     <div class="content">
       <ul>
@@ -11,9 +13,30 @@
           Country: {{form.country}}<br>
           Fish Name: {{form.fishName}}<br>
           Message: {{form.message}}<br>
+          Date: {{form.date}}
           <hr>
         </li>
       </ul>
     </div>
+
+
+    <h2>Quote Form DashBoard</h2>
+    <div class="content">
+      <ul>
+        <li *ngFor="let form of Quote">
+          <strong>{{ form.fname }}</strong><br>
+          Email: {{ form.lname }}<br>
+          Mobile: {{ form.email }}<br>
+          WhatsApp: {{form.phoneNumber}}<br>
+          Company: {{form.fishType}}<br>
+          Country: {{form.quantity}}<br>
+          Fish Name: {{form.optionalFishType}}<br>
+          Message: {{form.message}}<br>
+          Date: {{form.date}}
+          <hr>
+        </li>
+      </ul>
+    </div>
+
   </div>
   
