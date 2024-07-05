@@ -9,6 +9,7 @@ import { CongoListComponent } from './species-list/congo-list/congo-list.compone
 import { LagosListComponent } from './species-list/lagos-list/lagos-list.component';
 import { QuoteComponent } from './quote/quote.component';
 import { TermsComponent } from './terms/terms.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'Congo', component: CongoListComponent},
   {path: 'Lagos', component: LagosListComponent},
   {path: 'Quote', component: QuoteComponent},
-  {path: 'Terms', component: TermsComponent}
+  {path: 'Terms', component: TermsComponent},
+  {path: 'InformationCockpit', component: DashboardComponent}
 ];
 
 @NgModule({

@@ -22,7 +22,8 @@ import { HappyClientComponent } from './happy-client/happy-client.component';
 import { PopupDialogComponent } from './popup-dialog/popup-dialog.component';
 import { SearchComponent } from './species-list/search/search.component';
 import { TestimonialsComponent } from './service/testimonials/testimonials.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import {HttpClientModule} from '@angular/common/http'
     HappyClientComponent,
     PopupDialogComponent,
     SearchComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
