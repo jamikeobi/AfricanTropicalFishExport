@@ -9,5 +9,6 @@ export class QuoteFormData{
         public optionalFishType: string,
         public message: string,
         public date: string,
+        public id: string
     ){}
 }

@@ -10,6 +10,7 @@ export class ContactForm{
         public fishName: string,
         public quantity: string,
         public message: string,
-        public date?: string
+        public date: string,
+        public id: string
     ){}
 }

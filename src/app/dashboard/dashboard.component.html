@@ -1,43 +1,71 @@
 <div class="container">
+  <h2>Contact Form DashBoard</h2>
+  <button class="clear-form-btn" (click)="DeleteContactFormClicked()">Clear Tasks</button>
+  <div class="content">
+    <div class="dashboard-item-container">
+      <div style="text-align: center" *ngIf="data.length === 0">
+        <h2>No Contact Form data has been created yet!!!</h2>
+      </div>
+      <div class="task-item card" *ngFor="let form of data">
+        <div class="card-header">
+          <h3>{{ form.fullName }}</h3>
+          <button class="delete-btn" title="Delete" (click)="toggleConfirmDialog(form.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <p><b>Last Name: </b>{{ form.lname }}</p>
+          <p><b>Email: </b>{{ form.email }}</p>
+          <p><b>Phone Number: </b>{{ form.mobile }}</p>
+          <p><b>Fish Type: </b>{{ form.whatsapp }}</p>
+          <p><b>Quantity: </b>{{ form.quantity }}</p>
+          <p><b>Optional Fish Type: </b>{{ form.companyName }}</p>
+          <p><b>Message: </b>{{ form.country }}</p>
+          <p><b>Message: </b>{{ form.fishName }}</p>
+          <p><b>Message: </b>{{ form.quantity }}</p>
+          <p><b>Message: </b>{{ form.message }}</p>
+          <p><b>Date: </b>{{ form.date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h2>DashBoard</h2>
-  <h4>bdjksbjbdsj</h4>
-  
-    <div class="content">
-      <ul>
-        <li *ngFor="let form of data">
-          <strong>{{ form.fullName }}</strong><br>
-          Email: {{ form.email }}<br>
-          Mobile: {{ form.mobile }}<br>
-          WhatsApp: {{form.whatsapp}}<br>
-          Company: {{form.companyName}}<br>
-          Country: {{form.country}}<br>
-          Fish Name: {{form.fishName}}<br>
-          Message: {{form.message}}<br>
-          Date: {{form.date}}
-          <hr>
-        </li>
-      </ul>
+  <h2>Quote Form DashBoard</h2>
+  <button class="clear-form-btn" (click)="DeleteQuoteFormClicked()">Clear Tasks</button>
+
+  <div class="content">
+    <div class="dashboard-item-container">
+      <div style="text-align: center" *ngIf="Quote.length === 0">
+        <h2>No Quote Form data has been created yet!!!</h2>
+      </div>
+      <div class="task-item card" *ngFor="let form of Quote">
+        <div class="card-header">
+          <h3>{{ form.fname }}</h3>
+          <button class="delete-btn" title="Delete" (click)="toggleConfirmDialog(form.id)">
+            <i class="fa-solid fa-trash"></i>          
+          </button>
+        </div>
+        <div class="card-body">
+          <p><b>Last Name: </b>{{ form.lname }}</p>
+          <p><b>Email: </b>{{ form.email }}</p>
+          <p><b>Phone Number: </b>{{ form.phoneNumber }}</p>
+          <p><b>Fish Type: </b>{{ form.fishType }}</p>
+          <p><b>Quantity: </b>{{ form.quantity }}</p>
+          <p><b>Optional Fish Type: </b>{{ form.optionalFishType }}</p>
+          <p><b>Message: </b>{{ form.message }}</p>
+          <p><b>Date: </b>{{ form.date }}</p>
+        </div>
+      </div>
     </div>
 
-
-    <h2>Quote Form DashBoard</h2>
-    <div class="content">
-      <ul>
-        <li *ngFor="let form of Quote">
-          <strong>{{ form.fname }}</strong><br>
-          Email: {{ form.lname }}<br>
-          Mobile: {{ form.email }}<br>
-          WhatsApp: {{form.phoneNumber}}<br>
-          Company: {{form.fishType}}<br>
-          Country: {{form.quantity}}<br>
-          Fish Name: {{form.optionalFishType}}<br>
-          Message: {{form.message}}<br>
-          Date: {{form.date}}
-          <hr>
-        </li>
-      </ul>
+     <!-- Confirmation Dialog -->
+  <div class="confirm-dialog" *ngIf="showConfirmDialog">
+    <div class="confirm-dialog-content">
+      <p>Are you sure you want to delete this task?</p>
+      <button (click)="confirmDelete()">Yes</button>
+      <button (click)="cancelDelete()">No</button>
     </div>
-
+  </div>
   </div>
   
+</div>

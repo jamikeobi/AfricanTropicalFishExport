@@ -41,7 +41,7 @@ export class ContactComponent implements OnInit{
         fishName: this.orderForm.get('fishName')?.value,
         quantity: this.orderForm.get('quantity')?.value,
         message: this.orderForm.get('message')?.value,
-        date: currentDate
+        date: currentDate,
       };
       this.http.post<{name: string}>('https://africantropicalfish-default-rtdb.firebaseio.com/contactForm.json', formData,{headers: header}).subscribe((response) => {
         console.log('Form has been submitted:', response);

@@ -44,4 +44,12 @@ export class FormServiceService {
       return quote;
     }));
   }
+
+  DeleteContactFormClicked(): Observable<any>{
+    return this.http.delete(this.apiUrl);
+  }
+
+  DeleteQuoteFormClicked(): Observable<any>{
+    return this.http.delete(this.QuoteApiUrl);
+  }
 }
