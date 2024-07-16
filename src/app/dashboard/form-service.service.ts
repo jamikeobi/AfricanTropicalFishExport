@@ -1,9 +1,10 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { ContactForm } from '../Model/form';
 import { map, pipe } from 'rxjs';
 import { QuoteFormData } from '../Model/quote';
+import { LoggingServiceService } from './logging-service.service';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class FormServiceService {
   private QuoteApiUrl = 'https://africantropicalfish-default-rtdb.firebaseio.com/qouteForm.json';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private loggingService: LoggingServiceService) { }
 
   getFormData(): Observable<any>{
     return this.http.get<{[key: string]: ContactForm}>(this.apiUrl).pipe(map((response) => {
@@ -42,6 +43,17 @@ export class FormServiceService {
       }
 
       return quote;
+    }), catchError((error: HttpErrorResponse) => {
+      console.log('Full error:', error);
+
+      const statusCode = error.status;
+      const errorMessage = error.message;
+      const errorObj = {statusCode , errorMessage , dateTime: new Date};
+      console.log('Extracted error: ',errorObj);
+      
+      this.loggingService.logError(errorObj)
+      return throwError(() => error);
+      
     }));
   }
 
